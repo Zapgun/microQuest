@@ -1,0 +1,1 @@
+Raw asset files and assets not yet used in the project go here.
