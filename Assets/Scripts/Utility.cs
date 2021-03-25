@@ -55,4 +55,20 @@ public class Utility {
         }
         return null;
     }
+
+    /// <summary>
+    /// This function 'bounces' a creature (with a Rigidbody2D) using the applied force.
+    /// </summary>
+    /// <param name="trans">Creature's transform</param>
+    /// <param name="force">Amount of force to apply</param>
+    /// <returns></returns>
+    public static IEnumerator CreatureBounceCo (Transform trans, Vector2 force) {
+        Creature cre = trans.GetComponent<Creature>();
+        cre.rb.AddForce(force);
+        cre.state = CreatureState.Stunned; // Stun player to prevent them from moving
+        cre.rb.AddForce (force, ForceMode2D.Impulse);
+        yield return new WaitForSeconds (0.1f);
+        cre.rb.velocity = Vector2.zero;
+        cre.state = CreatureState.Idle; // Allow the player to move again
+    }
 }

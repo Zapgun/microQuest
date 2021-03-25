@@ -1,37 +1,36 @@
-﻿using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+/// <summary>
+/// This is responsible for handling player state and movement
+/// </summary>
+public class Player : Creature {
+    public float speed;
+    Vector3 change;
 
-    public static CharacterData data = new CharacterData ();
+    public int voidCheckRoomId; // instanceID of room used by void triggers
 
-    /// <summary>
-    ///  Save player data to JSON file
-    /// </summary>
-    public static void SaveData () {
-        string filePath = Application.persistentDataPath + "/gamesave.txt";
-        Debug.Log ("Saved player data: " + data.name);
-
-        // Save your saveData object to a json file.
-        string json = JsonUtility.ToJson (data, true); // 'true' makes it look pretty
-        File.WriteAllText (filePath, json);
-
-        Debug.Log ("Game Saved to: " + filePath);
+    // Update is called once per frame
+    void Update()
+    {
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        Move();
     }
 
-    public static void LoadData () {
-        string filePath = Application.persistentDataPath + "/gamesave.txt";
-        if (File.Exists (filePath)) {
-            // read the object data from file
-            string retrievedData = File.ReadAllText (filePath);
-            data = JsonUtility.FromJson<CharacterData> (retrievedData);
-            Debug.Log ("Game Data Loaded from: " + filePath);
-            Debug.Log ("Loaded character is: " + data.name);
+    void Move() {
+        if (state == CreatureState.Stunned)
+            return;
+        if (change != Vector3.zero) {
+            change = Vector3.Normalize(change);
+            anim.SetFloat("moveX", change.x);
+            anim.SetFloat("moveY", change.y);
+            anim.SetBool("moving", true);
+           rb.MovePosition(transform.position + change * speed);
         } else {
-            Debug.Log ("No save file named '" + filePath + "' found");
+            anim.SetBool("moving", false);
         }
     }
-
 }

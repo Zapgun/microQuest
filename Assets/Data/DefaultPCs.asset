@@ -15,7 +15,7 @@ MonoBehaviour:
   characters:
   - name: Kurog
     charClass: Ranger
-    portraitFile: Portraits/tf_orc1
+    portraitFile: Portraits/cre/tf_orc1
     portraitName: tf_orc1_4
     attack: 60
     defense: 100
@@ -24,7 +24,7 @@ MonoBehaviour:
     maxHealth: 100
   - name: Gelda
     charClass: Cleric
-    portraitFile: Portraits/tf_char8
+    portraitFile: Portraits/pc/tf_char8
     portraitName: tf_char8_3
     attack: 40
     defense: 80
@@ -33,7 +33,7 @@ MonoBehaviour:
     maxHealth: 80
   - name: Thorkin
     charClass: Rogue
-    portraitFile: Portraits/tf_char8
+    portraitFile: Portraits/pc/tf_char8
     portraitName: tf_char8_2
     attack: 80
     defense: 60
@@ -42,10 +42,19 @@ MonoBehaviour:
     maxHealth: 60
   - name: Immarelle
     charClass: Mage
-    portraitFile: Portraits/tf_char2
+    portraitFile: Portraits/pc/tf_char2
     portraitName: tf_char2_0
     attack: 100
     defense: 40
     speed: 60
     health: 40
     maxHealth: 40
+  - name: Effortless
+    charClass: Monk
+    portraitFile: Portraits/pc/tf_char4
+    portraitName: tf_char4_4
+    attack: 80
+    defense: 60
+    speed: 100
+    health: 60
+    maxHealth: 60

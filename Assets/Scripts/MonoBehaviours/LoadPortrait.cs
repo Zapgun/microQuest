@@ -12,7 +12,7 @@ public class LoadPortrait : MonoBehaviour
     void Start()
     {
         portrait = GetComponent<Image>();
-        CharacterData data = Player.data;
+        CharacterData data = PlayerData.data;
         portrait.sprite = Utility.LoadSprite(data.portraitFile, data.portraitName);;        
     }
 

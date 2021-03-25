@@ -18,7 +18,7 @@ public class MenuUI : MonoBehaviour
 
     public void LoadGame() {
         // Load next scene, load data
-        Player.LoadData();
+        PlayerData.LoadData();
         SceneManager.LoadScene(2); // 02 Room A
     }
 

@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/01 Menu.unity
     guid: f359fa0dea050454887950e83152f494
   - enabled: 1
-    path: Assets/Scenes/02 Room A.unity
+    path: Assets/Scenes/02 Zone A.unity
     guid: fb810de630514fa43b4a21c01e72e22d
   - enabled: 1
-    path: Assets/Scenes/03 Room B.unity
+    path: Assets/Scenes/03 Zone B.unity
     guid: 18d90b9c9e5f5fa46997523d95238d05
   m_configObjects: {}

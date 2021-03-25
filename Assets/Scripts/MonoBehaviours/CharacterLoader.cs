@@ -13,7 +13,7 @@ public class CharacterLoader : MonoBehaviour
     public Characters defaultCharacters;
     public int charIndex = 0;
 
-    CharacterData data = Player.data;
+    CharacterData data = PlayerData.data;
 
     public Text nameText;
     public Text placeholderText;
@@ -85,7 +85,7 @@ public class CharacterLoader : MonoBehaviour
         // ...
 
         GetPlayerData();
-        Player.SaveData();
+        PlayerData.SaveData();
         // Load the next scene
         SceneManager.LoadScene(2); // 02 Room A
     }
