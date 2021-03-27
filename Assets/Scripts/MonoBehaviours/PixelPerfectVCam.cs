@@ -44,7 +44,7 @@ public class PixelPerfectVCam : MonoBehaviour {
         // how many standard Unity units do we want to fit on the screen?
         // formula: cameraSize = ScreenHeight / (DesiredSizeOfUnit * 2)
         //vCam.m_Lens.OrthographicSize = Screen.height / (finalUnitSize * 2.0f);
-        vCam.m_Lens.OrthographicSize = CustomCanvasResizer.orthographicSize;
+        vCam.m_Lens.OrthographicSize = PixelPerfectResizer.orthographicSize;
     }
 
     int GetNearestMultiple (int value, int multiple) {

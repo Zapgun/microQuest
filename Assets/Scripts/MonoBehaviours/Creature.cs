@@ -6,9 +6,12 @@ public enum CreatureState {
     Idle, Stunned, Moving, Attacking, Dead
 }
 
+[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(Animator))]
 public class Creature : MonoBehaviour {
     
+    [HideInInspector]
     public Rigidbody2D rb;
+    [HideInInspector]
     public Animator anim;
     public CreatureState state = CreatureState.Idle;
 
