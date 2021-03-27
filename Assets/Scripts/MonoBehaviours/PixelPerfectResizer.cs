@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class PixelPerfectResizer : MonoBehaviour {
 
 	float oldScaleFactor;
+	[ReadOnly]
 	public float scaleFactor;
 	public float threshold = 300f;
 	float numPixels;
