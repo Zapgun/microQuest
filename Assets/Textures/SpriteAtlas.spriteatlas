@@ -45,12 +45,13 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 606d87a251d913a4a8a662fb3218cf21, type: 3}
     - {fileID: 102900000, guid: bde005e95aed13d48b3968ba29554b44, type: 3}
-    totalSpriteSurfaceArea: 816449
+    totalSpriteSurfaceArea: 1144769
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: b13bbcc2becc0e242a70290565d76c1b, type: 3}
   - {fileID: -5645026669834149446, guid: 270e5e33b1dea504fbe6ef5ab2734c05, type: 3}
   - {fileID: 1262068402988823885, guid: 270e5e33b1dea504fbe6ef5ab2734c05, type: 3}
   - {fileID: -3603311069517281531, guid: 270e5e33b1dea504fbe6ef5ab2734c05, type: 3}
@@ -2230,6 +2231,7 @@ SpriteAtlas:
   - {fileID: -873667392807258739, guid: 75a1f7efd6a18004eb300fd2261a5e80, type: 3}
   - {fileID: -4759037860536594354, guid: 75a1f7efd6a18004eb300fd2261a5e80, type: 3}
   m_PackedSpriteNamesToIndex:
+  - magic-cliffs-background
   - tf_char7_2
   - tf_char7_3
   - tf_char7_0
