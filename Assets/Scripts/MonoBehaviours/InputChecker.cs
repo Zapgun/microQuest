@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// This class checks to which input device isbeing used
+/// This class checks to which input device is being used
 /// and disabled the mouse cursor if a controller is in use.
 /// </summary>
 public class InputChecker : MonoBehaviour {

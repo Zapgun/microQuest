@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     // Awake 
     void Awake() {
-
         //Application.targetFrameRate = Screen.currentResolution.refreshRate;
 
         // Singleton pattern here!

@@ -12,16 +12,31 @@ using UnityEngine.Assertions;
 /// </summary>
 public class Room : MonoBehaviour {
     Cinemachine.CinemachineVirtualCamera[] vCam = null;
+    RoomBanner roomBanner;
+    public string roomName;
+    public bool discovered = false;
+    public int instanceID;
 
     void Awake () {
         vCam = GetComponentsInChildren<Cinemachine.CinemachineVirtualCamera> (true);
         Assert.IsNotNull (vCam);
+        roomBanner = FindObjectOfType<RoomBanner>(true);
+        if (instanceID == 0) instanceID = gameObject.GetInstanceID();
     }
 
     void OnTriggerEnter2D (Collider2D other) {
         if (other.CompareTag ("Player")) {
             vCam[0].gameObject.SetActive (true);
             PlayerData.currentRoom = this.gameObject.name;
+            if (roomBanner) {
+                roomBanner.gameObject.SetActive(false);
+                if (!string.IsNullOrEmpty(roomName) && !discovered) {
+                    roomBanner.nameText.text = roomName;
+                    roomBanner.gameObject.SetActive(true);
+                    //TODO: Ideally, discoverd locations should be based on a unique id and stored in saveable player data
+                }
+            }
+            //discovered = true;
         } else if (other.CompareTag ("VoidTrigger")) {
             other.transform.parent.GetComponent<Player> ().voidCheckRoomId = gameObject.GetInstanceID ();
         }
@@ -37,7 +52,7 @@ public class Room : MonoBehaviour {
 
                 // Create a negative force clamped at +/- 1
                 Vector2 force = 10 * new Vector2 (-Mathf.Clamp (other.offset.x * 10, -1, 1), -1f * Mathf.Clamp (other.offset.y * 10, -1, 1));
-                StartCoroutine (Utility.CreatureBounceCo (other.transform.parent, force));
+                StartCoroutine (Utility.CreaturePushCo (other.transform.parent, force));
             }
         } else if (other.CompareTag ("Player")) {
             vCam[0].gameObject.SetActive (false);

@@ -57,12 +57,13 @@ public class Utility {
     }
 
     /// <summary>
-    /// This function 'bounces' a creature (with a Rigidbody2D) using the applied force.
+    /// This function 'pushes' a creature with a Rigidbody2D using the applied Vector2D force.
     /// </summary>
     /// <param name="trans">Creature's transform</param>
     /// <param name="force">Amount of force to apply</param>
+    /// <param name="force">Amount of time the force is applied</param>
     /// <returns></returns>
-    public static IEnumerator CreatureBounceCo (Transform trans, Vector2 force) {
+    public static IEnumerator CreaturePushCo (Transform trans, Vector2 force, float time = 0.1f) {
         Creature cre = trans.GetComponent<Creature>();
         cre.rb.AddForce(force);
         cre.state = CreatureState.Stunned; // Stun player to prevent them from moving

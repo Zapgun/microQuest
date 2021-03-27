@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 71b7cfdf881cf0745af59d69c7a02d22
+guid: 40cd17ffd691bcb419269a90fcb3b469
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 7
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - GravityRegular5
+  - Romulus
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2
