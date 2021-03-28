@@ -14,14 +14,22 @@ public class PixelPerfectResizer : MonoBehaviour {
 
 	[ReadOnly]
 	public float orthoSize;
+	int oldScreenHeight;
 
 	public static float orthographicSize {
 		get {
-			float sf = Mathf.Max(Mathf.Ceil (Mathf.Pow (Screen.height, 0.5f) / 16f),1f);
-			return (Screen.height / (sf * 16f)) * 0.5f;}
+			int pixelsPerUnit = 16;
+			float scaleFactor = Mathf.Max(Mathf.Ceil (Mathf.Pow (Mathf.Min(Screen.height, Screen.width), 0.5f) / 10f),1f);
+			Debug.Log(scaleFactor);
+			return (Screen.height / (scaleFactor * pixelsPerUnit)) * 0.5f;}
 	}
 
 	void Update() {
-		orthoSize = orthographicSize;
+
+		if (Screen.height != oldScreenHeight)
+		{
+				orthoSize = orthographicSize;
+				oldScreenHeight = Screen.height;
+		}
 	}
 }

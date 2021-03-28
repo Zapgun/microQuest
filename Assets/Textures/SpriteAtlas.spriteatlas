@@ -57,12 +57,13 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 606d87a251d913a4a8a662fb3218cf21, type: 3}
     - {fileID: 102900000, guid: bde005e95aed13d48b3968ba29554b44, type: 3}
-    totalSpriteSurfaceArea: 1144753
+    totalSpriteSurfaceArea: 1145521
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: e17c44b1523555d49855ccfe15bdf372, type: 3}
   - {fileID: 21300000, guid: b13bbcc2becc0e242a70290565d76c1b, type: 3}
   - {fileID: -5645026669834149446, guid: 270e5e33b1dea504fbe6ef5ab2734c05, type: 3}
   - {fileID: 1262068402988823885, guid: 270e5e33b1dea504fbe6ef5ab2734c05, type: 3}
@@ -1148,6 +1149,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: edbe1c548760b2a40b94f0ca87e126c4, type: 3}
   - {fileID: 21300000, guid: 93e7c616fd129824391cdd53dc2c11cf, type: 3}
   - {fileID: 21300000, guid: 3519ce96328658f4299bd2d46cf99955, type: 3}
+  - {fileID: 21300000, guid: 8bbf3ba73f9f996469186033f54db916, type: 3}
   - {fileID: 21300000, guid: f59d36e8d8bb4b940876b0b36c16a844, type: 3}
   - {fileID: 21300000, guid: ddccc0b94748bf34f9034c3cea110d8d, type: 3}
   - {fileID: -2951967664954403388, guid: 7eb5f56acad4f114a92b2d2148d55923, type: 3}
@@ -1158,6 +1160,7 @@ SpriteAtlas:
   - {fileID: -4071657172455033642, guid: 7eb5f56acad4f114a92b2d2148d55923, type: 3}
   - {fileID: 8102997657236982211, guid: 7eb5f56acad4f114a92b2d2148d55923, type: 3}
   - {fileID: 1783546109666032978, guid: 7eb5f56acad4f114a92b2d2148d55923, type: 3}
+  - {fileID: 21300000, guid: cede8dba8cb0d9347bb08f50b71fd280, type: 3}
   - {fileID: 9165548309510466603, guid: 11dafedbf57411d4ebd4d12291952ad0, type: 3}
   - {fileID: 715380873326118396, guid: 11dafedbf57411d4ebd4d12291952ad0, type: 3}
   - {fileID: 6923469981519374278, guid: 11dafedbf57411d4ebd4d12291952ad0, type: 3}
@@ -2243,6 +2246,7 @@ SpriteAtlas:
   - {fileID: -873667392807258739, guid: 75a1f7efd6a18004eb300fd2261a5e80, type: 3}
   - {fileID: -4759037860536594354, guid: 75a1f7efd6a18004eb300fd2261a5e80, type: 3}
   m_PackedSpriteNamesToIndex:
+  - windowBorderTransparent
   - magic-cliffs-background
   - tf_char7_2
   - tf_char7_3
@@ -3328,6 +3332,7 @@ SpriteAtlas:
   - pixel-pencil-8
   - button
   - windowBorderLight
+  - windowBorderLight2
   - scroll
   - borderdecoration
   - tf_char6_3
@@ -3338,6 +3343,7 @@ SpriteAtlas:
   - tf_char6_6
   - tf_char6_5
   - tf_char6_4
+  - windowBorderDark2
   - tf_orc1_2
   - tf_orc1_3
   - tf_orc1_0
