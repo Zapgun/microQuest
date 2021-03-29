@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class RoomBanner : MonoBehaviour
 {
-    public Text nameText;
+    public TMP_Text nameText;
     
     public void DisableBanner() {
         gameObject.SetActive(false);
